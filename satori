@@ -188,7 +188,7 @@ packagesOfficialFile = path.expanduser("~") + "/.satori/packages-official.txt"
 packagesAurFile = path.expanduser("~") + "/.satori/packages-aur.txt"
 packagesSimilaritiesFile = path.expanduser("~") + "/.satori/packages-similarities.txt"
 blacklist = path.expanduser("~") + "/.satori/blacklist.txt"
-gitUrl = "git@github.com:manjaro/satori.git"
+gitUrl = "https://github.com/manjaro/satori.git"
 gitFolder = path.expanduser("~") + "/.satori/satori"
 
 

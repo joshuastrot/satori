@@ -16,10 +16,10 @@ page="0"
 perpage="250"
 webpath='https://aur.archlinux.org/packages/?O=%start&C=0&SeB=nd&SB=n&SO=a&PP=%perpage&do_Search=Go'
 url=$(echo "$webpath" | sed -e "s/%start/$start/g" -e "s/%perpage/$perpage/g"); #Insert HTTP-GET variables
-pagetotal=$(curl -s "$url" 2>/dev/null | grep "packages found. Page 1 of" | awk NR==1 | awk -F "Page 1 of " '{print $2}' | awk -F "." '{print $1}'); #Find the page total
+pagetotal=$(curl -s "$url" 2>/dev/null | grep "packages found" | awk NR==1 | awk -F "Page 1 of " '{print $2}' | awk -F "." '{print $1}'); #Find the page total
 
 echo ">> Started scraper."
-    
+
 cat /dev/null > $1 #Clear the input file
 
 while [ "$page" -lt "$pagetotal" ]; do #Start initial loop
