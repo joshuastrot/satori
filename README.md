@@ -1,8 +1,8 @@
-#Satori
+# Satori
 
 Package version checker for AUR and official repositories
 
-#Usage
+# Usage
 
 The first time using Satori, you will need to initialize it's databases.
 
